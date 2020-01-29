@@ -66,12 +66,13 @@ label{
 .result{
     font-family: 'Raleway', sans-serif;
     display: grid;
-    grid-template-columns: 350px 90px 280px;
+    grid-template-columns: 30% 10% 25% 10% 25% ;
     grid-template-areas: 
-    "i la a"
-    "i lpr p"
-    "i lr r"
-    "i lpark park";
+    "i  la a ln n"
+    "i lpr p lm m"
+    "i lr r . ."
+    "i lpark park . .";
+
     box-shadow: 1px 1px 3px #0a1612;
     margin: 20px;
     padding: 20px;
@@ -103,36 +104,68 @@ button:focus {outline:0;}
 
 button:active{background-color: #443729;}
 
-.result>img{
-    max-width: 325px;
+.result>.img{
+    display: grid;
+    max-width: 50%;
     grid-area: i;
     box-shadow: 1px 1px 3px black;
     border-radius: 5px;
 }
 
 .result>.label{
+    display: grid;
     font-weight: bold;
+    justify-content: start;
 }
 
 .result>.l-addr{
+    display: grid;
     grid-area: la;
 }
 
 .result>.l-price{
+    display: grid;
     grid-area: lpr;
 }
 
 .result>.l-rooms{
+    display: grid;
     grid-area: lr;
 }
 
 .result>.l-park{
+    display: grid;
     grid-area: lpark;
 }
 
-.result>.l-immediate{}
+
+.result>.l-name{
+    display: grid;
+    grid-area: ln;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.result>.name{
+    display: grid;
+    grid-area: n;
+}
+
+.result>.l-mail{
+    display: grid;
+    grid-area: lm;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.result>.mail{
+    display: grid;
+    grid-area: m;
+}
+
 
 .result>.address{
+    display: grid;
     grid-area: a;
 }
 
@@ -141,14 +174,15 @@ button:active{background-color: #443729;}
 }
 
 .result>.rooms {
+    display: grid;
     grid-area: r;
 }
 
 .result>.parking{
+    display: grid;
     grid-area: park;
 }
 
-.result>.immediate{}
 
 .no-match{
     color: #DD6300;

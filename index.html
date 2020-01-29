@@ -35,9 +35,32 @@
 
     <div id="results"></div>
 
-    <!-- Your Code Here -->
-    <!-- You should start doing handlebar stuff here -->
-    <!-- Your Code Here -->
+    <script id="immed-template" type="text/x-handlebars-template">
+        <div >
+            {{#each apts}}
+                <div class="result">
+                    <img src="{{img}}" alt="Apartment" class="img">     
+                    <span class="label l-addr">Address :</span>
+                    <span class="address">{{address}}</span>
+                    <span class="label l-price">Price :</span>
+                    <span class="price">{{price}}$</span>
+                    <span class="label l-rooms">Rooms :</span> 
+                    <span class="rooms">{{rooms}}</span>
+                    <span class="label l-park">Parking</span>
+                    <span class="label l-name">Name :</span>
+                    <span class="label l-mail">Email :</span>
+                    {{#if parking}}
+                        <span class="parking">available</span>
+                    {{/if}}
+                    {{#if immediate}} 
+                        <span class="name">{{contactDetails.name}}</span>
+                        <span class="mail">{{contactDetails.email}}</span>
+                    {{/if}}
+                </div>
+            {{/each}}
+        </div>    
+    </script>
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
